@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class Heart : MonoBehaviour {
 
+
     public int healthValue;
 
     public Vector2 spawnDropForce;
 
     public float forceTime;
+
+    public string bulletTagName;
+
+    public string playerTagName;
 
     private Rigidbody2D rb2D;
 
@@ -34,25 +39,24 @@ public class Heart : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {      
-        if(collision.tag == "Bullet")
+        if(collision.tag == bulletTagName)
         {
-            Debug.Log("Heart Will Be Destroyed");
+            SoundManager.PlaySound("HitObject");
+
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
 
-        if(collision.tag == "Player")
+        if(collision.tag == playerTagName)
         {
-            Debug.Log("Health Increase Aquired!");
-
             Health playerHealth = collision.gameObject.GetComponent<Health>();
-
             playerHealth.health = playerHealth.health + healthValue;
+
+            SoundManager.PlaySound("PlusHealth");
 
             Destroy(gameObject);
         }
     }
-
 
     // Update is called once per frame
     void Update ()

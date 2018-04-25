@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
 
-    public static AudioClip playerJump, playerLand, playerFire, playerOutOfAmmo, plusHealth, hitObject;
+    public static AudioClip playerJump, playerLand, playerFire, playerOutOfAmmo, plusHealth, hitObject, teleport;
 
     static AudioSource audioSource;
 
-	// Use this for initialization
 	void Start ()
     {
         playerJump = Resources.Load<AudioClip>("Audio/PlayerJump");
@@ -17,7 +16,7 @@ public class SoundManager : MonoBehaviour {
         playerOutOfAmmo = Resources.Load<AudioClip>("Audio/PlayerOutOfAmmo");
         plusHealth = Resources.Load<AudioClip>("Audio/PlusHealth");
         hitObject = Resources.Load<AudioClip>("Audio/HitObject");
-
+        teleport = Resources.Load<AudioClip>("Audio/Teleport");
 
         audioSource = GetComponent<AudioSource>();
 	}
@@ -25,7 +24,6 @@ public class SoundManager : MonoBehaviour {
 
     public static void PlaySound(string audioClipName)
     {
-        //Debug.Log("IN");
         switch (audioClipName)
         {
             case "PlayerJump":
@@ -46,11 +44,9 @@ public class SoundManager : MonoBehaviour {
             case "HitObject":
                 audioSource.PlayOneShot(hitObject);
                 break;
+            case "Teleport":
+                audioSource.PlayOneShot(teleport);
+                break;
         }
     }
-
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

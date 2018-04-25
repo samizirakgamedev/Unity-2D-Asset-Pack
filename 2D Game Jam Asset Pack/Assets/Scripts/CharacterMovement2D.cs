@@ -187,12 +187,10 @@ public class CharacterMovement2D : MonoBehaviour {
 
         if (castedCollider2D != null && frontCheckOne == false && frontCheckTwo == false && frontCheckThree == false && backCheckOne == false && backCheckTwo == false && backCheckThree == false && nullifiedMaterial2D == false)
         {
-            Debug.Log("AHHH");
             castedCollider2D.sharedMaterial = null;
             nullifiedMaterial2D = true;
         }
     }
-
 
     private void FlipPlayer(float horizontal)
     {

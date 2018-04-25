@@ -99,7 +99,7 @@ MonoBehaviour:
   player: {fileID: 0}
   portal: {fileID: 0}
   playerTag: Player
-  teleportDelay: 1
+  teleportDelay: 0.5
 --- !u!212 &212635489196666926
 SpriteRenderer:
   m_ObjectHideFlags: 1

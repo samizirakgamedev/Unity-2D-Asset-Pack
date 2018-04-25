@@ -355,10 +355,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 1368972808618650, guid: 0748f9154782f0645982c645b456a0af, type: 2}
-      propertyPath: m_Name
-      value: Portal_2
-      objectReference: {fileID: 0}
     - target: {fileID: 114307139604104474, guid: 0748f9154782f0645982c645b456a0af,
         type: 2}
       propertyPath: player
@@ -369,6 +365,10 @@ Prefab:
       propertyPath: portal
       value: 
       objectReference: {fileID: 344088786}
+    - target: {fileID: 1368972808618650, guid: 0748f9154782f0645982c645b456a0af, type: 2}
+      propertyPath: m_Name
+      value: Portal_2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0748f9154782f0645982c645b456a0af, type: 2}
   m_IsPrefabParent: 0

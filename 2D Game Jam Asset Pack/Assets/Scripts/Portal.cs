@@ -23,16 +23,8 @@ public class Portal : MonoBehaviour {
 
     IEnumerator Teleport(float delay)
     {
+        SoundManager.PlaySound("Teleport");
         yield return new WaitForSeconds(delay);
         player.transform.position = new Vector2(portal.transform.position.x , portal.transform.position.y);
     }
-
-    void Start () {
-		
-	}
-	
-
-	void Update () {
-		
-	}
 }

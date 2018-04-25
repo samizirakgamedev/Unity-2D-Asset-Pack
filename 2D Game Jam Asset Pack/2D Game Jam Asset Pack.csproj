@@ -288,6 +288,7 @@
     <Compile Include="Assets\Scripts\Gun2D.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
+    <Compile Include="Assets\Scripts\Patrol.cs" />
     <Compile Include="Assets\Scripts\Portal.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
   </ItemGroup>

@@ -15,7 +15,7 @@ public class SpikedEnemyBehaviour : MonoBehaviour {
     {
         health -= damage;
 
-        //SoundManager.PlaySound("DamageEnemy");
+        SoundManager.PlaySound("HitEnemy");
 
         if(health <= 0)
         {

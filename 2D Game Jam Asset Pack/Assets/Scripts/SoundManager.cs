@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
 
-    public static AudioClip playerJump, playerLand, playerFire, playerOutOfAmmo, plusHealth, hitObject, teleport;
+    public static AudioClip playerJump, playerLand, playerFire, playerOutOfAmmo, plusHealth, hitObject,hitEnemy, teleport;
 
     static AudioSource audioSource;
 
@@ -16,6 +16,7 @@ public class SoundManager : MonoBehaviour {
         playerOutOfAmmo = Resources.Load<AudioClip>("Audio/PlayerOutOfAmmo");
         plusHealth = Resources.Load<AudioClip>("Audio/PlusHealth");
         hitObject = Resources.Load<AudioClip>("Audio/HitObject");
+        hitEnemy = Resources.Load<AudioClip>("Audio/DamageEnemy");
         teleport = Resources.Load<AudioClip>("Audio/Teleport");
 
         audioSource = GetComponent<AudioSource>();
@@ -43,6 +44,9 @@ public class SoundManager : MonoBehaviour {
                 break;
             case "HitObject":
                 audioSource.PlayOneShot(hitObject);
+                break;
+            case "HitEnemy":
+                audioSource.PlayOneShot(hitEnemy);
                 break;
             case "Teleport":
                 audioSource.PlayOneShot(teleport);

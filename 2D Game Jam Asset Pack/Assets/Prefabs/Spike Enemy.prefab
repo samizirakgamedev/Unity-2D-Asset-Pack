@@ -38,9 +38,10 @@ GameObject:
   - component: {fileID: 50586166864700738}
   - component: {fileID: 61194038532150378}
   - component: {fileID: 114657893947479784}
+  - component: {fileID: 114100261182868884}
   m_Layer: 0
   m_Name: Spike Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,6 +118,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.98914903, y: 1.0099341}
   m_EdgeRadius: 0
+--- !u!114 &114100261182868884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1958779003110188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c47adf46adb37429124277407687e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
 --- !u!114 &114657893947479784
 MonoBehaviour:
   m_ObjectHideFlags: 1

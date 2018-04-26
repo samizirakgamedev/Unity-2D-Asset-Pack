@@ -195,6 +195,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 400
   bulletDeathTime: 1.5
+  bulletDamage: 1
+  tagToDamage: Enemy
+  playerTag: Player
 --- !u!212 &212385443133641944
 SpriteRenderer:
   m_ObjectHideFlags: 1

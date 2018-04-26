@@ -5,7 +5,6 @@ using UnityEngine;
 public class Bullet2D : MonoBehaviour {
 
     [SerializeField]
-    //[Range(0, 10)]
     [Tooltip("The speed at which the bullets will be fired")]
     private float bulletSpeed = 7.0f;
 
@@ -13,6 +12,12 @@ public class Bullet2D : MonoBehaviour {
     [Range(0, 10)]
     [Tooltip("The amount of time the bullet stays in the gameworld before it is destroyed")]
     private float bulletDeathTime = 1.5f;
+
+    public int bulletDamage;
+
+    public string tagToDamage;
+
+    public string playerTag;
 
     private Rigidbody2D bullet;
 
@@ -33,6 +38,18 @@ public class Bullet2D : MonoBehaviour {
     {
         CancelInvoke("BulletDeath");    
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag(tagToDamage))
+        {
+            collision.SendMessage("TakeDamage", bulletDamage);
+        }
+
+        if(collision.tag != playerTag)
+            Destroy(gameObject);
+    }
+
 
     void Update ()
     {

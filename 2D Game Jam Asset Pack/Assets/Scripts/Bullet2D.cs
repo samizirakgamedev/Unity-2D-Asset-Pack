@@ -19,6 +19,8 @@ public class Bullet2D : MonoBehaviour {
 
     public string playerTag;
 
+    public string cantShootTag;
+
     private Rigidbody2D bullet;
 
 
@@ -46,7 +48,7 @@ public class Bullet2D : MonoBehaviour {
             collision.SendMessage("TakeDamage", bulletDamage);
         }
 
-        if(collision.tag != playerTag)
+        if(collision.tag != playerTag && collision.tag != cantShootTag)
             Destroy(gameObject);
     }
 

@@ -198,6 +198,7 @@ MonoBehaviour:
   bulletDamage: 1
   tagToDamage: Enemy
   playerTag: Player
+  cantShootTag: Cant Damage
 --- !u!212 &212385443133641944
 SpriteRenderer:
   m_ObjectHideFlags: 1

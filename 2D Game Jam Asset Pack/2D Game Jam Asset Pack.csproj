@@ -291,6 +291,7 @@
     <Compile Include="Assets\Scripts\Patrol.cs" />
     <Compile Include="Assets\Scripts\Portal.cs" />
     <Compile Include="Assets\Scripts\ScrollBackground.cs" />
+    <Compile Include="Assets\Scripts\SkyFollow2D.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\SpikedEnemyBehaviour.cs" />
   </ItemGroup>

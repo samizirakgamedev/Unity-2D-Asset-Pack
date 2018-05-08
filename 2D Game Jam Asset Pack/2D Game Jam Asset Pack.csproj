@@ -285,9 +285,16 @@
     <Compile Include="Assets\Scripts\Bullet2D.cs" />
     <Compile Include="Assets\Scripts\CameraFollow2D.cs" />
     <Compile Include="Assets\Scripts\CharacterMovement2D.cs" />
+    <Compile Include="Assets\Scripts\Enemy AI\ChargeState.cs" />
+    <Compile Include="Assets\Scripts\Enemy AI\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Enemy AI\EnemySight.cs" />
+    <Compile Include="Assets\Scripts\Enemy AI\IEnemyState.cs" />
+    <Compile Include="Assets\Scripts\Enemy AI\PatrolState.cs" />
+    <Compile Include="Assets\Scripts\Enemy AI\RangedState.cs" />
     <Compile Include="Assets\Scripts\Gun2D.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
+    <Compile Include="Assets\Scripts\IgnoreCol.cs" />
     <Compile Include="Assets\Scripts\Patrol.cs" />
     <Compile Include="Assets\Scripts\Portal.cs" />
     <Compile Include="Assets\Scripts\ScrollBackground.cs" />

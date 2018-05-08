@@ -17,14 +17,17 @@ public class Portal : MonoBehaviour {
     {
         if(collision.gameObject.tag == playerTag & Input.GetButtonDown("Interact"))
         {
-            StartCoroutine(Teleport(teleportDelay));
+            StartCoroutine(Teleport(teleportDelay, player));
         }
     }
 
-    IEnumerator Teleport(float delay)
+    IEnumerator Teleport(float delay, GameObject beingTeleported)
     {
+        CharacterMovement2D playerMovement = beingTeleported.GetComponent<CharacterMovement2D>();
+        playerMovement.enabled = false;
         SoundManager.PlaySound("Teleport");
         yield return new WaitForSeconds(delay);
-        player.transform.position = new Vector2(portal.transform.position.x , portal.transform.position.y);
+        beingTeleported.transform.position = new Vector2(portal.transform.position.x , portal.transform.position.y);
+        playerMovement.enabled = true;
     }
 }

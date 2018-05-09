@@ -11,7 +11,7 @@ public class EnemySight : MonoBehaviour {
     {
       if(col.tag == "Player")
       {
-            enemy.enemyTarget = col.gameObject;
+            enemy.EnemyTarget = col.gameObject;
       }
     }
 
@@ -19,7 +19,7 @@ public class EnemySight : MonoBehaviour {
     {
         if (col.tag == "Player")
         {
-            enemy.enemyTarget = null;
+            enemy.EnemyTarget = null;
         }
     }
 }

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet2D : MonoBehaviour
-{
+public class EnemyBullet2D : MonoBehaviour {
+
 
     [SerializeField]
     [Tooltip("The speed at which the bullets will be fired")]
@@ -18,7 +18,7 @@ public class Bullet2D : MonoBehaviour
 
     public string tagToDamage;
 
-    public string playerTag;
+    public string enemyTag;
 
     public string cantShootTag;
 
@@ -49,7 +49,7 @@ public class Bullet2D : MonoBehaviour
             collision.SendMessage("TakeDamage", bulletDamage);
         }
 
-        if (collision.tag != playerTag && collision.tag != cantShootTag)
+        if (collision.tag != enemyTag && collision.tag != cantShootTag)
             Destroy(gameObject);
     }
 
@@ -58,9 +58,10 @@ public class Bullet2D : MonoBehaviour
     {
         bullet.velocity = transform.forward * bulletSpeed;
 
-        if (Gun2D.isFlipped == true)
-            bullet.AddForce(new Vector2(-bulletSpeed, 0));
-        else if (Gun2D.isFlipped == false)
-            bullet.AddForce(new Vector2(bulletSpeed, 0));
+            if (Enemy.facingDefault == false)
+                bullet.AddForce(new Vector2(-bulletSpeed, 0));
+            else if (Enemy.facingDefault == true)
+                bullet.AddForce(new Vector2(bulletSpeed, 0));
+
     }
 }

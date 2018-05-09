@@ -8,19 +8,19 @@ AnimatorController:
   m_Name: Spike Enemy
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: enemyInRange
+  - m_Name: isPatroling
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: outOfAmmo
+  - m_Name: isFiring
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: enemyClose
+  - m_Name: isCharging
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -46,11 +46,14 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: enemyInRange
+  - m_ConditionMode: 2
+    m_ConditionEvent: isPatroling
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isFiring
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: enemyClose
+    m_ConditionEvent: isCharging
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102700268108304638}
@@ -73,11 +76,14 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: enemyInRange
+  - m_ConditionMode: 2
+    m_ConditionEvent: isPatroling
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isFiring
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: enemyClose
+    m_ConditionEvent: isCharging
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102700268108304638}
@@ -101,7 +107,13 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: enemyInRange
+    m_ConditionEvent: isFiring
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isCharging
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: isPatroling
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102281123900668418}
@@ -124,14 +136,14 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: isPatroling
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isCharging
+    m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: enemyInRange
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: enemyClose
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: outOfAmmo
+    m_ConditionEvent: isFiring
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102764293681638588}
@@ -155,7 +167,13 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: enemyInRange
+    m_ConditionEvent: isCharging
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isFiring
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: isPatroling
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102281123900668418}
@@ -179,13 +197,13 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: outOfAmmo
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: enemyInRange
+    m_ConditionEvent: isPatroling
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: enemyClose
+    m_ConditionEvent: isCharging
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: isFiring
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102764293681638588}

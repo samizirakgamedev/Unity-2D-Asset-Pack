@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Cant Damage
   - Edge
+  - Enemy Bullet
+  - Enemy Undamageable
   layers:
   - Default
   - TransparentFX

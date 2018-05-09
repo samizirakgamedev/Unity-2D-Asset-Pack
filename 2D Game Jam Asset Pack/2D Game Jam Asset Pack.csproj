@@ -291,6 +291,7 @@
     <Compile Include="Assets\Scripts\Enemy AI\IEnemyState.cs" />
     <Compile Include="Assets\Scripts\Enemy AI\PatrolState.cs" />
     <Compile Include="Assets\Scripts\Enemy AI\RangedState.cs" />
+    <Compile Include="Assets\Scripts\EnemyBullet2D.cs" />
     <Compile Include="Assets\Scripts\Gun2D.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />

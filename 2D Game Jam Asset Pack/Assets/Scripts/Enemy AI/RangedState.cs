@@ -15,11 +15,18 @@ public class RangedState : IEnemyState
     {
         Debug.Log("Im In Ranged State");
 
-        if(enemy.enemyTarget != null)
-        {
-            enemy.MoveEnemy();
-        }
+        if(enemy.isEnemyFiring == false)
+            enemy.RangedAttack();
 
+        if(enemy.EnemyTarget != null)
+        {
+            if(enemy.isEnemyFiring == false)
+                enemy.MoveEnemy();
+        }
+        else
+        {
+            enemy.ChangeEnemyState(new PatrolState());
+        }
     }
 
     public void ExitState()

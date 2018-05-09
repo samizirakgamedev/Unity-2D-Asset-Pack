@@ -12,13 +12,20 @@ public class Health : MonoBehaviour {
     public Sprite fullHeartSprite;
     public Sprite emptyHeartSprite;
 
-	
-	void Start () {
-		
-	}
-	
-	
-	void Update () {
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        SoundManager.PlaySound("HitEnemy");
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void Update () {
 		
         if(health > numOfHearts)
         {

@@ -4,42 +4,54 @@ using UnityEngine;
 
 public class CharacterMovement2D : MonoBehaviour {
 
-    [SerializeField]
-    [Tooltip("Input the name of the boolean being used in the Animator to trigger your characters jump animation")]
-    private string jumpBoolName;
-
+    [Header("Ground & Wall Check Settings")]
     [SerializeField]
     [Tooltip("Array of empty GameObject Transforms (must be made children of the character and positioned at characters feet) that are used to calculate when the player touches the ground")]
     private Transform[] groundPoints;
-
-    [SerializeField]
-    private Transform frontCheckStartOne, frontCheckEndOne, frontCheckStartTwo, frontCheckEndTwo, frontCheckStartThree, frontCheckEndThree;
-
-    [SerializeField]
-    private Transform backCheckStartOne, backCheckEndOne, backCheckStartTwo, backCheckEndTwo, backCheckStartThree, backCheckEndThree;
-
-    [SerializeField]
-    [Range(0, 15)]
-    [Tooltip("The speed at which your character will move along the X Axis")]
-    private float movementSpeed = 7.0f;
 
     [SerializeField]
     [Range(0, 1)]
     [Tooltip("Creates invisible radius around whatever you choose is 'Ground'. This is used to detect when the player is 'Grounded'")]
     private float groundRadius = 0.2f;
 
+    [Tooltip("The start and end points of the 3 front facing sensors that are attached to the character. Best made by using Empty GameObjects")]
     [SerializeField]
+    private Transform frontCheckStartOne, frontCheckEndOne, frontCheckStartTwo, frontCheckEndTwo, frontCheckStartThree, frontCheckEndThree;
+
+    [Tooltip("The start and end points of the 3 back facing sensors that are attached to the character. Best made by using Empty Gameobjects")]
+    [SerializeField]
+    private Transform backCheckStartOne, backCheckEndOne, backCheckStartTwo, backCheckEndTwo, backCheckStartThree, backCheckEndThree;
+
+    [Header("Movement Settings")]
+    [SerializeField]
+    [Range(0, 15)]
+    [Tooltip("The speed at which your character will move along the X Axis")]
+    private float movementSpeed = 7.0f;
+
+    [SerializeField]
+    [Tooltip("The force that is applied to make the character jump")]
     [Range(0, 15)]
     private float jumpForce = 10.0f;
 
+    [Tooltip("The higher the Fall Multiplier the faster the character will fall after reaching the peak of its jump")]
     [SerializeField][Range(0,5)]
     private float fallMultiplier = 2.5f;
 
+    [Tooltip("The Chracters threshold velocity that player has to reach when holding down the jump button to make the character do a high jump rather than a low jump")]
     [SerializeField][Range(0,5)]
     public float lowJumpMultiplier = 3.0f;
 
     [SerializeField]
+    [Tooltip("Input the name of the boolean being used in the Animator to trigger your characters jump animation")]
+    private string jumpBoolName;
+
+    [Tooltip("The layer that all objects the character can walk along are tagged as")]
+    [SerializeField]
     private LayerMask whatIsGround;
+
+    [Tooltip("If ticked it will allow the player to control the characters movement mid jump")]
+    [SerializeField]
+    private bool airControl;
 
     private Rigidbody2D playerRigidbody;
 
@@ -63,9 +75,6 @@ public class CharacterMovement2D : MonoBehaviour {
 
     private PhysicsMaterial2D material2D;
 
-    [SerializeField]
-    private bool airControl;
-
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
@@ -81,8 +90,6 @@ public class CharacterMovement2D : MonoBehaviour {
     void Update()
     {
         HandleInput();
-
-       // Debug.Log("It is: " + jumpEnded);
     }
 
     void FixedUpdate()

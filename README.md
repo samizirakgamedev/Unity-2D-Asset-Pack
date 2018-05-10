@@ -4,11 +4,11 @@ This **FREE** Unity 2D Asset Pack contains a variety of tools to help people who
 to code using C#.
 It contains a variety of tools including*:
 
-* 10 + Scripts - Dynamic 2D Movement, Health System etc.
-* 15 + Sprites - Player sprites with animations, Enemy sprites with Animations etc.
-* 5 + Prefabs - Useful for prototyping quick and easily 2D Game Ideas
-* 6 + Royalty Free audio clips
-* Test Scene - See how some of the included scripts can be utilized within your game.
+* **10 + Scripts** - Dynamic 2D Movement, Health System etc.
+* **15 + Sprites** - Player sprites with animations, Enemy sprites with Animations etc.
+* **5 + Prefabs** - Useful for prototyping quick and easily 2D Game Ideas
+* **6 + Royalty Free audio clips**
+* **Test Scene** - See how some of the included scripts can be utilized within your game.
 
 ## Getting Started & Prerequisites
 

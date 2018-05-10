@@ -20,7 +20,7 @@ You will need the following software to open/use/contribute to this asset pack:
 
 ## Authors
 
-* **Sami Zirak-Dezfouly** - *Developer & Creator* - [Linkdin](https://uk.linkedin.com/in/sami-zirak-dezfouly-3089b012b)
+* **Sami Zirak-Dezfouly** - *Developer & Creator* - [Linkedin](https://uk.linkedin.com/in/sami-zirak-dezfouly-3089b012b)
 
 ## Contributors
 
